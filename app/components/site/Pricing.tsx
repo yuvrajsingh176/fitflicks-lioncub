@@ -9,12 +9,16 @@ const tiers = [
     price: "₹1,000",
     note: "Includes exclusive LionCubs Bib",
     cta: "Register",
+    featured: true,
+
   },
   {
     title: "Monthly",
     price: "₹3,500",
     note: "Pay as you go",
     cta: "Join Monthly",
+    featured: true,
+
   },
   {
     title: "Quarterly",
@@ -30,6 +34,8 @@ const tiers = [
     badge: "15% OFF",
     note: "Max value",
     cta: "Join 6 Months",
+    featured: true,
+
   },
 ];
 
@@ -41,12 +47,12 @@ export default function Pricing() {
           <h2 className="text-3xl font-bold md:text-4xl">Fee Structure</h2>
           <p className="mt-3 text-muted-foreground">Sibling Discount: extra 5% OFF</p>
         </div>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 p-2">
           {tiers.map((t) => (
             <Card key={t.title} className={t.featured ? "ring-2 ring-accent" : ""}>
               <CardHeader>
                 <div className="flex items-center justify-between">
-                  <CardTitle>{t.title}</CardTitle>
+                  <CardTitle className="text-center">{t.title}</CardTitle>
                   {t.badge && (
                     <span className="rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold text-accent-foreground">
                       {t.badge}

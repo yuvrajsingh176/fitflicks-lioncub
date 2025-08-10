@@ -22,7 +22,7 @@ export default function Home() {
           style={{
             maxWidth: "1280px",
             margin: "0 auto",
-            padding: "2rem",
+            // padding: "2rem",
             textAlign: "center",
           }}>
           <Programs />

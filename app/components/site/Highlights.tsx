@@ -2,49 +2,56 @@ import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/ca
 import { Dumbbell, Trophy, Users, ShieldCheck, HeartPulse, Sparkles } from "lucide-react";
 
 const activityItems = [
-  { 
-    icon: <Dumbbell />, 
+  {
+    icon: <Dumbbell />,
     text: "Football • Basketball • Cricket • Tennis",
     image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=200&fit=crop&crop=center",
     alt: "Various sports equipment"
   },
-  { 
-    icon: <Sparkles />, 
+  {
+    icon: <Sparkles />,
     text: "Rugby • Self-defense • Archery • Gymnastics (Basics)",
     image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=200&fit=crop&crop=center",
     alt: "Martial arts and gymnastics training"
   },
-  { 
-    icon: <Users />, 
+  {
+    icon: <Users />,
     text: "Recreational Games",
-    image: "https://images.unsplash.com/photo-1520778342589-e04d88ac2d08?w=400&h=200&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=200&fit=crop&crop=center",
     alt: "Children playing recreational games"
   },
+  {
+    icon: <Users />,
+    text: "Recreational Games",
+    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=200&fit=crop&crop=center",
+    alt: "Children playing recreational games"
+  },
+
 ];
 
 const highlights = [
-  { 
-    icon: <Trophy />, 
+  {
+    icon: <Trophy />,
     text: "Monthly Friendly Matches",
-    image: "https://images.unsplash.com/photo-1614963326505-843868e1d26b?w=400&h=200&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=200&fit=crop&crop=center",
     alt: "Children in friendly sports match"
   },
-  { 
-    icon: <ShieldCheck />, 
+  {
+    icon: <ShieldCheck />,
     text: "Quarterly Fitness Report Card",
     image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=400&h=200&fit=crop&crop=center",
     alt: "Fitness progress tracking"
   },
-  { 
-    icon: <Users />, 
+  {
+    icon: <Users />,
     text: "Bond & Bloom Parent-Child Sessions",
     image: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=400&h=200&fit=crop&crop=center",
     alt: "Parent and child exercising together"
   },
-  { 
-    icon: <HeartPulse />, 
+  {
+    icon: <HeartPulse />,
     text: "1 Free Demo Class",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=200&fit=crop&crop=center",
+    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=200&fit=crop&crop=center",
     alt: "Demo fitness class"
   },
 ];
@@ -59,8 +66,8 @@ export default function Highlights() {
             Comprehensive sports training with special features designed for your child's growth
           </p>
         </div>
-        
-        <div className="grid gap-8 lg:grid-cols-2">
+
+        <div className="grid gap-8 lg:grid-cols-2 p-2">
           <div>
             <h3 className="text-2xl font-semibold mb-6">Activities Offered</h3>
             <div className="space-y-4">
@@ -68,8 +75,8 @@ export default function Highlights() {
                 <Card key={a.text} className="group overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
                   <div className="flex">
                     <div className="relative w-32 h-24 overflow-hidden">
-                      <img 
-                        src={a.image} 
+                      <img
+                        src={a.image}
                         alt={a.alt}
                         className="h-full w-full object-cover transition-transform group-hover:scale-110"
                       />
@@ -93,8 +100,8 @@ export default function Highlights() {
                 <Card key={h.text} className="group overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
                   <div className="flex">
                     <div className="relative w-32 h-24 overflow-hidden">
-                      <img 
-                        src={h.image} 
+                      <img
+                        src={h.image}
                         alt={h.alt}
                         className="h-full w-full object-cover transition-transform group-hover:scale-110"
                       />

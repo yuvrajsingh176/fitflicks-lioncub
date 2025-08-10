@@ -24,13 +24,13 @@ export default function About() {
       <div className="container">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold md:text-4xl">About Us</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            At Lion Cubs Fitness, a strong body builds a strong mind. We bring kids back to the basics — movement,
+          <p className="mt-4 text-lg text-muted-foreground p-2">
+            At Lion Cubs Fitness, a strong body builds a strong mind. We bring kids back to the basics movement,
             imagination and joy. Sessions are collaborative, not competitive, helping children cheer for themselves and for each other.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 p-2">
           <Card className="transition-all hover:-translate-y-0.5 hover:shadow-lg">
             <CardHeader>
               <CardTitle>Our Mission</CardTitle>
@@ -54,12 +54,12 @@ export default function About() {
           </Card>
         </div>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-2">
+        <div className="mt-12 grid gap-8 lg:grid-cols-2 p-2">
           <div>
-            <h3 className="text-2xl font-semibold">Why Choose Us?</h3>
+            <h3 className="text-2xl font-semibold">Why Choose Us?</h3>  
             <ul className="mt-6 space-y-4">
               {leftReasons.map(({ icon: Icon, text }) => (
-                <li key={text} className="flex items-start gap-3 animate-fade-in">
+                <li key={text} className="flex items-start gap-3 animate-fade-in text-start">
                   <Icon className="mt-0.5 size-5 text-accent" />
                   <span>{text}</span>
                 </li>
@@ -70,7 +70,7 @@ export default function About() {
             <h3 className="text-2xl font-semibold">What You Get</h3>
             <ul className="mt-6 space-y-4">
               {rightReasons.map(({ icon: Icon, text }) => (
-                <li key={text} className="flex items-start gap-3 animate-fade-in">
+                <li key={text} className="flex items-start gap-3 animate-fade-in text-start">
                   <Icon className="mt-0.5 size-5 text-accent" />
                   <span>{text}</span>
                 </li>

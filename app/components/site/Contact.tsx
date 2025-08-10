@@ -6,7 +6,7 @@ const whatsappUrl = `https://wa.me/919818387498?text=Hi%20LionCubs%20Fitness!%20
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-16 md:py-24">
+    <section id="contact" className="py-16 md:py-24 p-2">
       <div className="container">
         <div className="grid gap-6 lg:grid-cols-2">
           <Card>
@@ -17,13 +17,13 @@ export default function Contact() {
               <p className="text-muted-foreground">
                 Join the pride today! Build a future full of movement, smiles and strength — one cub at a time.
               </p>
-              <div className="flex items-center gap-3"><PhoneCall className="text-accent" /> <span className="font-semibold">Call/WhatsApp:</span> +91 98183 87498</div>
-              <div className="flex items-center gap-3"><Mail className="text-accent" /> <span className="font-semibold">Email:</span> <a className="underline" href="mailto:lioncubsfitness@gmail.com">lioncubsfitness@gmail.com</a></div>
-              <div className="flex items-start gap-3"><MapPin className="mt-1 text-accent" /> <span>
-                <span className="font-semibold">Locations:</span> Jagriti Enclave (Delhi) • Palam Vihar (Gurugram)
+              <div className="flex items-center gap-3 text-start"><PhoneCall className="text-accent" /> <span className="font-semibold">Call/WhatsApp:</span> +91 98183 87498</div>
+              <div className="flex items-center gap-3 text-start"><Mail className="text-accent" /> <span className="font-semibold">Email:</span> <a className="underline" href="mailto:lioncubsfitness@gmail.com">lioncubsfitness@gmail.com</a></div>
+              <div className="flex items-start gap-3 text-start"><MapPin className="mt-1 text-accent" /> <span>
+                <span className="font-semibold text-start">Locations:</span> Jagriti Enclave (Delhi) • Palam Vihar (Gurugram)
               </span></div>
-              <div className="flex items-center gap-3"><Instagram className="text-accent" /> <span className="font-semibold">Instagram:</span> <a className="underline" href="https://instagram.com/lioncubsfitness" target="_blank" rel="noreferrer">@lioncubsfitness</a></div>
-              <div className="pt-2">
+              <div className="flex items-center gap-3 text-start"><Instagram className="text-accent" /> <span className="font-semibold">Instagram:</span> <a className="underline" href="https://instagram.com/lioncubsfitness" target="_blank" rel="noreferrer">@lioncubsfitness</a></div>
+              <div className="pt-2 text-start flex w-full justify-center items-center">
                 <a href={whatsappUrl} target="_blank" rel="noreferrer">
                   <Button variant="hero">Book Free Demo</Button>
                 </a>
@@ -42,9 +42,9 @@ export default function Contact() {
                 "New Camp Alert: Limited Spots — Enroll Now!",
                 "Small Steps, Big Roars — Join Our Fitness Family!",
               ].map((t) => (
-                <div key={t} className="flex items-start gap-3">
-                  <span className="mt-2 size-2 rounded-sm bg-accent" />
-                  <p className="font-medium">{t}</p>
+                <div key={t} className="flex items-start gap-3 text-start">
+                  <span className="mt-2 size-2 rounded-sm bg-accent text-start" />
+                  <p className="font-medium text-start">{t}</p>
                 </div>
               ))}
             </CardContent>

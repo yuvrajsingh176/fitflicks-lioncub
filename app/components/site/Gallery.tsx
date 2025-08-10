@@ -8,21 +8,21 @@ const testimonials = [
   {
     name: "Priya Sharma",
     child: "Aarav (6 years)",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face",
+    image: "/supercubs.webp",
     text: "Aarav was very shy before joining LionCubs. Now he's confident, active, and always excited for his sessions!",
     rating: 5
   },
   {
     name: "Rajesh Kumar",
     child: "Ananya (4 years)",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
+    image: "/supercubs.webp",
     text: "The Bond & Bloom sessions are amazing! Ananya and I have such fun together while staying fit.",
     rating: 5
   },
   {
     name: "Meera Patel",
     child: "Rohan (8 years)",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face",
+    image: "/supercubs.webp",
     text: "The quarterly fitness reports help us track Rohan's progress. The coaches are very professional!",
     rating: 5
   }
@@ -42,17 +42,18 @@ const galleryImages = [
     alt: "Sports training session"
   },
   {
-    src: "https://images.unsplash.com/photo-1614963326505-843868e1d26b?w=300&h=200&fit=crop&crop=center",
-    alt: "Team activities"
+    src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop&crop=center",
+    alt: "Children playing football"
   },
   {
-    src: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=300&h=200&fit=crop&crop=center",
-    alt: "Parent-child session"
+    src: "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=300&h=200&fit=crop&crop=center",
+    alt: "Kids doing gymnastics"
   },
   {
-    src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=300&h=200&fit=crop&crop=center",
-    alt: "Group fitness activity"
-  }
+    src: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=200&fit=crop&crop=center",
+    alt: "Sports training session"
+  },
+
 ];
 
 export default function Gallery() {
@@ -67,12 +68,12 @@ export default function Gallery() {
               See the fun and excitement in our fitness sessions!
             </p>
           </div>
-          
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 p-2">
             {galleryImages.map((img, index) => (
               <div key={index} className="group relative overflow-hidden rounded-lg">
-                <img 
-                  src={img.src} 
+                <img
+                  src={img.src}
                   alt={img.alt}
                   className="h-60 w-full object-cover transition-transform group-hover:scale-110"
                 />
@@ -83,42 +84,58 @@ export default function Gallery() {
         </div>
 
         {/* Testimonials Section */}
-        <div>
+        <div className="p-2">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold md:text-4xl">What Parents Say</h2>
             <p className="mt-3 text-muted-foreground">
               Real stories from real families in our LionCubs community
             </p>
           </div>
-          
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="transition-all hover:shadow-lg hover:-translate-y-1">
-                <CardHeader className="pb-3">
-                  <div className="flex items-center gap-3">
-                    <img 
-                      src={testimonial.image} 
+              <Card
+                key={index}
+                className="flex flex-col justify-between p-2 rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              >
+                <CardHeader className="pb-4 border-b border-gray-100">
+                  <div className="flex items-center gap-4">
+                    <img
+                      src={testimonial.image}
                       alt={testimonial.name}
-                      className="size-12 rounded-full object-cover"
+                      className="w-14 h-14 rounded-full object-cover border border-gray-300"
                     />
                     <div>
-                      <CardTitle className="text-base">{testimonial.name}</CardTitle>
-                      <p className="text-sm text-muted-foreground">Parent of {testimonial.child}</p>
+                      <CardTitle className="text-lg font-semibold">
+                        {testimonial.name}
+                      </CardTitle>
+                      <p className="text-sm text-gray-500">
+                        Parent of {testimonial.child}
+                      </p>
                     </div>
                   </div>
-                  <div className="flex gap-1">
+
+                  {/* Star Ratings */}
+                  <div className="flex items-center gap-1 mt-3">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <Star key={i} className="size-4 fill-yellow-400 text-yellow-400" />
+                      <Star
+                        key={i}
+                        className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                      />
                     ))}
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <Quote className="size-5 text-accent mb-2" />
-                  <p className="text-sm text-muted-foreground">{testimonial.text}</p>
+
+                <CardContent className="pt-4">
+                  <Quote className="size-6 text-accent mb-3 opacity-75" />
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {testimonial.text}
+                  </p>
                 </CardContent>
               </Card>
             ))}
           </div>
+
         </div>
 
         {/* CTA Section */}

@@ -14,7 +14,7 @@ const whatsappUrl = `https://wa.me/919818387498?text=Hi%20LionCubs%20Fitness!%20
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 flex justify-center items-center z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 flex justify-center items-center z-40 w-full bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container flex h-16 items-center justify-between">
         <a href="#home" className="flex items-center gap-2 font-bold tracking-tight">
           <span className="text-lg">LionCubs Fitness</span>
