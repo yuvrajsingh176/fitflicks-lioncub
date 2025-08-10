@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-gradient-to-br from-primary via-primary-glow to-accent py-20 md:py-28"
+      className="relative overflow-hidden bg-gradient-to-br from-primary via-primary-glow to-accent py-20 md:py-28 flex justify-center items-center"
     >
       {/* No background image, just gradient */}
 
