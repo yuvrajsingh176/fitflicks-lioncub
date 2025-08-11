@@ -14,18 +14,6 @@ const activityItems = [
     image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=200&fit=crop&crop=center",
     alt: "Martial arts and gymnastics training"
   },
-  {
-    icon: <Users />,
-    text: "Recreational Games",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=200&fit=crop&crop=center",
-    alt: "Children playing recreational games"
-  },
-  {
-    icon: <Users />,
-    text: "Recreational Games",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=200&fit=crop&crop=center",
-    alt: "Children playing recreational games"
-  },
 
 ];
 
@@ -41,18 +29,6 @@ const highlights = [
     text: "Quarterly Fitness Report Card",
     image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=400&h=200&fit=crop&crop=center",
     alt: "Fitness progress tracking"
-  },
-  {
-    icon: <Users />,
-    text: "Bond & Bloom Parent-Child Sessions",
-    image: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=400&h=200&fit=crop&crop=center",
-    alt: "Parent and child exercising together"
-  },
-  {
-    icon: <HeartPulse />,
-    text: "1 Free Demo Class",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=200&fit=crop&crop=center",
-    alt: "Demo fitness class"
   },
 ];
 

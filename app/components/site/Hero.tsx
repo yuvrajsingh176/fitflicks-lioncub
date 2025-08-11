@@ -2,14 +2,38 @@ import Image from "next/image";
 import { Button } from "../../components/ui/button";
 import { BadgeCheck, PhoneCall } from "lucide-react";
 import CaraouselHero from "./CaraouselHero";
+import Link from "next/link";
 
 const whatsappUrl = `https://wa.me/919818387498?text=Hi%20LionCubs%20Fitness!%20Interested%20in%20a%20free%20demo%20class.`;
+
+const programs = [
+  {
+    name: "Yoga",
+    image: '/yoga.avif',
+    link: 'yoga'
+  },
+  {
+    name: "Zumba",
+    image: '/zumba.avif',
+    link: 'zumba'
+  },
+  {
+    name: "Table Tennis",
+    image: '/tt.avif',
+    link: 'tabletennis'
+  },
+  {
+    name: "Children Indoor Games",
+    image: '/children.avif',
+    link: 'funzone'
+  }
+]
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-gradient-to-br from-primary via-primary-glow to-accent py-20 md:py-28 flex justify-center items-center"
+      className="relative overflow-hidden bg-gradient-to-br from-primary via-primary-glow to-accent py-10 md:py-28 flex justify-center items-center"
     >
       {/* No background image, just gradient */}
 
@@ -42,25 +66,24 @@ export default function Hero() {
               </a>
             </div>
           </div>
-          <div className="mt-8 grid grid-cols-2 gap-3 text-sm sm:grid-cols-4 mx-2">
-            {[
-              "Safe & Structured",
-              "Expert Trainers",
-              "Age-Specific Programs",
-              "Fun Meets Fitness!",
-            ].map((text) => (
-              <div
-                key={text}
-                className="flex items-center gap-2 rounded-md bg-white/10 backdrop-blur md:p-3 p-2 border border-white/20 min-w-0"
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 items-center justify-items-center gap-4 mx-2">
+            {programs.map((program) => (
+              <Link
+                href={program.link}
+                key={program.name}
               >
-                <BadgeCheck className="text-accent flex-shrink-0 size-4" />
-                <span className="font-medium text-white text-xs sm:text-sm truncate">
-                  {text}
-                </span>
-              </div>
-
+                <Image
+                  src={program.image}
+                  alt={program.name}
+                  width={200}
+                  height={200}
+                  className="rounded-xl object-cover w-[150px] h-[150px] shadow-lg"
+                />
+              </Link>
             ))}
+
           </div>
+
 
           {/* Carousel Column */}
           {/* <CaraouselHero /> */}
