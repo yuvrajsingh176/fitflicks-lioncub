@@ -9,7 +9,7 @@ export default function ZumbaPage() {
       {/* Hero Section */}
       <section className="relative  h-screen md:w-screen w-full">
         <Image
-          src="/zumba-hero.png"
+          src="/zumba-hero.avif"
           alt="zumba Class"
           fill
           className="object-cover w-fit"

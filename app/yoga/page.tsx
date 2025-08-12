@@ -9,7 +9,7 @@ export default function YogaPage() {
             {/* Hero Section */}
             <section className="relative  h-screen md:w-screen w-full">
                 <Image
-                    src="/yoga-hero.png"
+                    src="/yoga-hero.avif"
                     alt="Yoga Class"
                     fill
                     className="object-cover w-fit"
