@@ -28,62 +28,66 @@ export default function YogaPage() {
                 <h2 className="text-3xl font-bold text-center mb-10">Why Choose Us?</h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
-                    <div className="p-6 rounded-xl bg-gray-100 shadow hover:shadow-lg transition w-full max-w-sm">
+                    <div className=" rounded-xl bg-gray-100 shadow hover:shadow-lg transition w-full max-w-sm">
                         <Image
-                            src="/yoga-class.jpg"
+                            src="/yoga-class.avif"
                             alt="Yoga Classes"
                             width={250}
                             height={250}
-                            className="rounded-lg object-cover w-full h-[250px] mb-4"
+                            className="rounded-t-lg object-cover w-full h-[250px] mb-4"
                         />
-                        <h3 className="text-xl font-semibold mb-2">Yoga Classes</h3>
-                        <p className="text-muted-foreground">
-                            Join our daily yoga sessions designed for beginners to advanced
-                            practitioners, focusing on flexibility, strength, and inner
-                            peace.
-                        </p>
+                        <div className="px-4 pb-4">
+                            <h3 className="text-xl font-semibold mb-2">Yoga Classes</h3>
+                            <p className="text-muted-foreground">
+                                Join our daily yoga sessions designed for beginners to advanced
+                                practitioners, focusing on flexibility, strength, and inner
+                                peace.
+                            </p>
+                        </div>
                     </div>
 
-                    <div className="p-6 rounded-xl bg-gray-100 shadow hover:shadow-lg transition w-full max-w-sm">
+                    <div className=" rounded-xl bg-gray-100 shadow hover:shadow-lg transition w-full max-w-sm">
                         <Image
-                            src="/yoga-certification.jpg"
+                            src="/yoga-certification.avif"
                             alt="Yoga Certification"
                             width={400}
                             height={250}
-                            className="rounded-lg object-cover w-full h-[250px] mb-4"
+                            className="rounded-t-lg object-cover w-full h-[250px] mb-4"
                         />
-                        <h3 className="text-xl font-semibold mb-2">Certification</h3>
-                        <p className="text-muted-foreground">
-                            Get certified by experienced yoga masters. Our programs are
-                            internationally recognized, ensuring quality and authenticity.
-                        </p>
+                        <div className="px-4 pb-4">
+                            <h3 className="text-xl font-semibold mb-2">Certification</h3>
+                            <p className="text-muted-foreground">
+                                Get certified by experienced yoga masters. Our programs are
+                                internationally recognized, ensuring quality and authenticity.
+                            </p>
+                        </div>
                     </div>
 
-                    <div className="p-6 rounded-xl bg-gray-100 shadow hover:shadow-lg transition w-full max-w-sm">
+                    <div className=" rounded-xl bg-gray-100 shadow hover:shadow-lg transition w-full max-w-sm">
                         <Image
-                            src="/yoga-teachers.jpg"
+                            src="/yoga-teachers.avif"
                             alt="Experienced Teachers"
                             width={400}
                             height={250}
-                            className="rounded-lg object-cover w-full h-[250px] mb-4"
+                            className="rounded-t-lg object-cover w-full h-[250px] mb-4"
                         />
-                        <h3 className="text-xl font-semibold mb-2">Experienced Teachers</h3>
-                        <p className="text-muted-foreground">
-                            Learn from certified and highly knowledgeable instructors with
-                            years of teaching experience and a passion for yoga.
-                        </p>
+                        <div className="px-4 pb-4">
+                            <h3 className="text-xl font-semibold mb-2">Experienced Teachers</h3>
+                            <p className="text-muted-foreground">
+                                Learn from certified and highly knowledgeable instructors with
+                                years of teaching experience and a passion for yoga.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
 
             {/* Features List */}
-            <section className="bg-green-50 py-12">
-                <div className="container">
-                    <h2 className="text-2xl font-bold text-center mb-8">
-                        What You’ll Get
-                    </h2>
-                    <div className="max-w-3xl mx-auto grid gap-4 px-4">
+            <section className="bg-green-50 py-8 flex flexcol items-center justify-center">
+                <div className="">
+
+                    <div className="max-w-3xl mx-auto  gap-4 px-4 flex flex-col justify-center items-center text-start">
                         {[
                             "Daily yoga sessions for all levels",
                             "Certification upon completion",

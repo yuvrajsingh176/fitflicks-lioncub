@@ -27,53 +27,59 @@ export default function ZumbaPage() {
         <h2 className="text-3xl font-bold text-center mb-10">Why Choose Our Zumba?</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
-          <div className="p-6 rounded-xl bg-pink-50 :bg-neutral-900 shadow hover:shadow-lg transition w-full max-w-sm">
+          <div className=" rounded-xl bg-pink-50 :bg-neutral-900 shadow hover:shadow-lg transition w-full max-w-sm">
             <Image
-              src="/zumba-fun.jpg"
+              src="/zumba-fun.avif"
               alt="Fun Zumba Classes"
               width={400}
               height={250}
-              className="rounded-lg object-cover w-full h-[250px] mb-4"
+              className="rounded-t-lg object-cover w-full h-[250px] mb-4"
             />
-            <h3 className="text-xl font-semibold mb-2">Fun & Energetic Classes</h3>
-            <p className="text-muted-foreground">
-              Every session is a party! Our instructors keep the beats pumping and the moves exciting so you never get bored.
-            </p>
+            <div className="px-4 pb-4">
+              <h3 className="text-xl font-semibold mb-2">Fun & Energetic Classes</h3>
+              <p className="text-muted-foreground">
+                Every session is a party! Our instructors keep the beats pumping and the moves exciting so you never get bored.
+              </p>
+            </div>
           </div>
 
-          <div className="p-6 rounded-xl bg-pink-50 :bg-neutral-900 shadow hover:shadow-lg transition w-full max-w-sm">
+          <div className=" rounded-xl bg-pink-50 :bg-neutral-900 shadow hover:shadow-lg transition w-full max-w-sm">
             <Image
-              src="/zumba-calories.jpg"
+              src="/zumba-calories.avif"
               alt="Burn Calories"
               width={400}
               height={250}
-              className="rounded-lg object-cover w-full h-[250px] mb-4"
+              className="rounded-t-lg object-cover w-full h-[250px] mb-4"
             />
-            <h3 className="text-xl font-semibold mb-2">Burn Calories & Tone Up</h3>
-            <p className="text-muted-foreground">
-              Zumba can burn up to 600 calories per class while improving your strength, flexibility, and stamina.
-            </p>
+            <div className="px-4 pb-4">
+              <h3 className="text-xl font-semibold mb-2">Burn Calories & Tone Up</h3>
+              <p className="text-muted-foreground">
+                Zumba can burn up to 600 calories per class while improving your strength, flexibility, and stamina.
+              </p>
+            </div>
           </div>
 
-          <div className="p-6 rounded-xl bg-pink-50 :bg-neutral-900 shadow hover:shadow-lg transition w-full max-w-sm">
+          <div className=" rounded-xl bg-pink-50 :bg-neutral-900 shadow hover:shadow-lg transition w-full max-w-sm">
             <Image
-              src="/zumba-community.jpg"
+              src="/zumba-community.avif"
               alt="Zumba Community"
               width={400}
               height={250}
-              className="rounded-lg object-cover w-full h-[250px] mb-4"
+              className="rounded-t-lg object-cover w-full h-[250px] mb-4"
             />
-            <h3 className="text-xl font-semibold mb-2">A Welcoming Community</h3>
-            <p className="text-muted-foreground">
-              Dance alongside supportive classmates and make fitness friends who’ll cheer you on.
-            </p>
+            <div className="px-4 pb-4">
+              <h3 className="text-xl font-semibold mb-2">A Welcoming Community</h3>
+              <p className="text-muted-foreground">
+                Dance alongside supportive classmates and make fitness friends who’ll cheer you on.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Features */}
-      <section className="bg-pink-100 :bg-pink-900/20 py-12">
-        <div className="container">
+      <section className="bg-pink-100 :bg-pink-900/20 py-12 flex justify-center items-center">
+        <div className=" ">
           <h2 className="text-2xl font-bold text-center mb-8">
             What You’ll Get
           </h2>
