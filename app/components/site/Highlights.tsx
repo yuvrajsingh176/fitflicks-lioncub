@@ -1,62 +1,105 @@
-import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
-import { Dumbbell, Trophy, Users, ShieldCheck, HeartPulse, Sparkles } from "lucide-react";
+"use client";
+
+import { motion } from "framer-motion";
+import { Card, CardContent } from "../../components/ui/card";
+import { Music, Music2, Table2, Baby } from "lucide-react"; // You can replace with better icons
+import { Sparkles, Trophy, ShieldCheck, HeartPulse } from "lucide-react";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const activityItems = [
   {
-    icon: <Dumbbell />,
-    text: "Football • Basketball • Cricket • Tennis",
-    image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=200&fit=crop&crop=center",
-    alt: "Various sports equipment"
+    icon: <Music className="w-6 h-6" />,
+    text: "Zumba – Energetic dance workouts for all skill levels",
+    image: "/zumba.jpg",
+    alt: "Zumba dance session",
   },
   {
-    icon: <Sparkles />,
-    text: "Rugby • Self-defense • Archery • Gymnastics (Basics)",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=200&fit=crop&crop=center",
-    alt: "Martial arts and gymnastics training"
+    icon: <Music2 className="w-6 h-6" />,
+    text: "Dance Classes – From freestyle to structured choreography",
+    image: "/dance.jpg",
+    alt: "Dance class performance",
   },
-
+  {
+    icon: <Table2 className="w-6 h-6" />,
+    text: "Table Tennis – Fun skill-building for kids & beginners",
+    image: "/table-tennis.jpg",
+    alt: "Table tennis training",
+  },
+  {
+    icon: <Baby className="w-6 h-6" />,
+    text: "Children’s Indoor Sports Center – Safe & playful activities",
+    image: "/indoor-sports.jpg",
+    alt: "Indoor kids sports",
+  },
 ];
 
 const highlights = [
   {
-    icon: <Trophy />,
-    text: "Monthly Friendly Matches",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=200&fit=crop&crop=center",
-    alt: "Children in friendly sports match"
+    icon: <Trophy className="w-6 h-6" />,
+    text: "Monthly Dance & Sports Showcases",
+    alt: "Kids performing on stage",
   },
   {
-    icon: <ShieldCheck />,
-    text: "Quarterly Fitness Report Card",
-    image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=400&h=200&fit=crop&crop=center",
-    alt: "Fitness progress tracking"
+    icon: <ShieldCheck className="w-6 h-6" />,
+    text: "Safe, Supervised, and Fun Environment",
+    alt: "Safety equipment and staff",
+  },
+  {
+    icon: <HeartPulse className="w-6 h-6" />,
+    text: "Fitness & Stamina Tracking for Every Child",
+    alt: "Fitness report",
+  },
+  {
+    icon: <Sparkles className="w-6 h-6" />,
+    text: "Creative Theme Days & Fun Challenges",
+    alt: "Kids enjoying theme day",
   },
 ];
 
 export default function Highlights() {
   return (
-    <section id="activities" className="py-16 md:py-24 bg-gradient-to-b from-background via-primary/5 to-background">
+    <section
+      id="activities"
+      className="py-16 md:py-24 bg-gradient-to-b from-background via-primary/5 to-background"
+    >
       <div className="container">
-        <div className="mx-auto max-w-2xl text-center mb-12">
-          <h2 className="text-3xl font-bold md:text-4xl">Activities & Highlights</h2>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="mx-auto max-w-2xl text-center mb-12"
+        >
+          <h2 className="text-3xl font-bold md:text-4xl">
+            Activities & Highlights
+          </h2>
           <p className="mt-3 text-muted-foreground">
-            Comprehensive sports training with special features designed for your child's growth
+            From Zumba to table tennis, our programs spark joy, fitness, and creativity in every child.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid gap-8 lg:grid-cols-2 p-2">
-          <div>
+          {/* Activities */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
+          >
             <h3 className="text-2xl font-semibold mb-6">Activities Offered</h3>
             <div className="space-y-4">
               {activityItems.map((a) => (
-                <Card key={a.text} className="group overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
+                <motion.div
+                  key={a.text}
+                  variants={fadeUp}
+                  whileHover={{ scale: 1.03 }}
+                  className="group overflow-hidden rounded-xl border border-border hover:shadow-lg transition-all cursor-pointer"
+                >
                   <div className="flex">
-                    <div className="relative w-32 h-24 overflow-hidden">
-                      <img
-                        src={a.image}
-                        alt={a.alt}
-                        className="h-full w-full object-cover transition-transform group-hover:scale-110"
-                      />
-                    </div>
                     <CardContent className="flex-1 p-4">
                       <div className="flex items-start gap-3">
                         <div className="text-accent mt-1">{a.icon}</div>
@@ -64,24 +107,29 @@ export default function Highlights() {
                       </div>
                     </CardContent>
                   </div>
-                </Card>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div>
+          {/* Highlights */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
+          >
             <h3 className="text-2xl font-semibold mb-6">Special Highlights</h3>
             <div className="space-y-4">
               {highlights.map((h) => (
-                <Card key={h.text} className="group overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
+                <motion.div
+                  key={h.text}
+                  variants={fadeUp}
+                  whileHover={{ scale: 1.03 }}
+                  className="group overflow-hidden rounded-xl border border-border hover:shadow-lg transition-all cursor-pointer"
+                >
                   <div className="flex">
-                    <div className="relative w-32 h-24 overflow-hidden">
-                      <img
-                        src={h.image}
-                        alt={h.alt}
-                        className="h-full w-full object-cover transition-transform group-hover:scale-110"
-                      />
-                    </div>
+
                     <CardContent className="flex-1 p-4">
                       <div className="flex items-start gap-3">
                         <div className="text-accent mt-1">{h.icon}</div>
@@ -89,10 +137,10 @@ export default function Highlights() {
                       </div>
                     </CardContent>
                   </div>
-                </Card>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

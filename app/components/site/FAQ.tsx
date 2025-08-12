@@ -1,4 +1,12 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../../components/ui/accordion";
+"use client";
+
+import { motion } from "framer-motion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../../components/ui/accordion";
 
 const faqs = [
   {
@@ -23,23 +31,44 @@ const faqs = [
   },
 ];
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.5 },
+  }),
+};
+
 export default function FAQ() {
   return (
     <section id="faq" className="py-16 md:py-24 bg-primary/5 p-2">
       <div className="container">
-        <div className="mx-auto max-w-2xl text-center">
+        <motion.div
+          className="mx-auto max-w-2xl text-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-3xl font-bold md:text-4xl">FAQs</h2>
-        </div>
-        <div className="mx-auto mt-8 max-w-3xl">
+        </motion.div>
+
+        <motion.div
+          className="mx-auto mt-8 max-w-3xl"
+          initial="hidden"
+          animate="visible"
+        >
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((f, i) => (
-              <AccordionItem key={i} value={`item-${i}`}>
-                <AccordionTrigger>{f.q}</AccordionTrigger>
-                <AccordionContent>{f.a}</AccordionContent>
-              </AccordionItem>
+              <motion.div key={i} custom={i} variants={fadeUp}>
+                <AccordionItem value={`item-${i}`}>
+                  <AccordionTrigger>{f.q}</AccordionTrigger>
+                  <AccordionContent>{f.a}</AccordionContent>
+                </AccordionItem>
+              </motion.div>
             ))}
           </Accordion>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
